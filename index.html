@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>风里有约｜北京周末</title>
+  <style>
+    :root{--ink:#173c43;--muted:#6f8585;--teal:#317c83;--deep:#236975;--mist:#edf5f1;--cream:#fffdf7;--line:#e8ece5;--sun:#f5b95e;--coral:#e97c64;--shadow:0 12px 32px rgba(33,75,77,.10)}
+    *{box-sizing:border-box} html,body{margin:0;background:#e7efed;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif} button{font:inherit}
+    .phone{position:relative;max-width:430px;min-height:100dvh;margin:0 auto;background:var(--cream);overflow:hidden;padding:env(safe-area-inset-top) 0 calc(82px + env(safe-area-inset-bottom))}
+    .top{padding:18px 20px 9px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:9px;align-items:center}.brand img{width:34px;height:34px;border-radius:11px;box-shadow:0 5px 14px rgba(31,95,99,.17)}.brand strong{font-size:17px;letter-spacing:.08em}.brand small{display:block;color:var(--muted);font-size:11px;margin-top:2px;letter-spacing:.03em}.avatar{width:35px;height:35px;border:0;border-radius:50%;background:linear-gradient(145deg,#c7e4e0,#6fa5a8);color:white;font-size:14px}
+    main{padding:0 20px}.hero{padding:18px 0 12px}.date{color:var(--teal);font-weight:700;font-size:13px;letter-spacing:.06em}.hero h1{font-size:29px;line-height:1.27;margin:8px 0 6px;letter-spacing:-.04em}.hero p{margin:0;color:var(--muted);line-height:1.6;font-size:14px}.locrow{display:flex;align-items:center;justify-content:space-between;margin:16px 0 6px}.loc{border:1px solid #d8e6e0;background:white;border-radius:999px;padding:7px 10px;color:#437074;font-size:12px;display:flex;align-items:center;gap:5px}.loc b{color:var(--ink);font-weight:600}.switch{display:flex;background:#eff3ed;border-radius:11px;padding:3px;gap:2px}.switch button{border:0;background:transparent;color:#79908c;border-radius:8px;padding:6px 9px;font-size:11px}.switch button.on{background:white;color:var(--ink);box-shadow:0 2px 6px rgba(30,66,65,.08)}
+    .ask{border:0;width:100%;border-radius:20px;text-align:left;padding:16px;background:linear-gradient(125deg,#286f7d,#4d9695);color:white;box-shadow:0 12px 25px rgba(44,123,129,.19);margin:14px 0 22px;position:relative;overflow:hidden}.ask:after{content:"";position:absolute;width:130px;height:130px;border-radius:50%;right:-35px;top:-65px;background:rgba(255,240,186,.24)}.ask span{position:relative;z-index:1;display:block;font-size:12px;opacity:.82;margin-bottom:6px}.ask strong{position:relative;z-index:1;font-size:16px}.ask i{position:absolute;right:20px;bottom:17px;font-style:normal;font-size:20px;z-index:1}
+    .section-head{display:flex;align-items:baseline;justify-content:space-between;margin:7px 0 13px}.section-head h2{font-size:18px;letter-spacing:-.02em;margin:0}.section-head button{border:0;background:none;color:var(--teal);font-size:12px;padding:0}.ways{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:25px}.way{border:1px solid var(--line);background:white;border-radius:16px;min-height:80px;padding:10px 6px 8px;text-align:center;color:var(--ink);box-shadow:0 3px 10px rgba(37,71,68,.03);font-size:12px;line-height:1.35}.way .emoji{display:block;font-size:23px;margin-bottom:5px}.way.active{background:#e2f0eb;border-color:#84b8ae;color:#175b62}.way:nth-child(n+9){display:none}.ways.expanded .way:nth-child(n+9){display:block}
+    .mini-title{font-size:14px;font-weight:700;margin:0 0 10px}.filterbar{display:flex;gap:8px;overflow:auto;padding:0 0 15px;scrollbar-width:none}.filterbar::-webkit-scrollbar{display:none}.filter{white-space:nowrap;border:1px solid #dce8e1;background:#fff;border-radius:999px;padding:8px 12px;color:#607b78;font-size:12px}.filter.active{background:var(--ink);color:white;border-color:var(--ink)}
+    .route-list{display:grid;gap:13px}.route{border:1px solid #edf0eb;background:#fff;border-radius:21px;padding:0;overflow:hidden;text-align:left;box-shadow:0 6px 18px rgba(39,76,70,.055);width:100%;color:var(--ink)}.route-visual{height:112px;padding:13px;position:relative;overflow:hidden}.route-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(19,49,48,.12))}.visual-1{background:linear-gradient(135deg,#dceee5,#83b3aa)}.visual-2{background:linear-gradient(135deg,#f8e9bd,#e89670)}.visual-3{background:linear-gradient(135deg,#e5e8cd,#91a884)}.visual-4{background:linear-gradient(135deg,#dbe9f1,#799bb6)}.shape{position:absolute;border-radius:50%;opacity:.78}.shape.one{width:160px;height:160px;right:-35px;bottom:-85px;background:#f8f6df}.shape.two{width:75px;height:75px;left:26px;top:28px;background:rgba(255,255,255,.48)}.route-tag{position:relative;z-index:1;display:inline-flex;background:rgba(255,255,255,.82);border-radius:20px;padding:5px 8px;font-size:11px;color:#355f62}.route-body{padding:14px 14px 13px}.route-title{font-size:16px;font-weight:720;letter-spacing:-.02em;margin:0 0 7px}.route-desc{font-size:12px;color:var(--muted);line-height:1.55;margin:0 0 11px}.facts{display:flex;gap:9px;flex-wrap:wrap;color:#5b7774;font-size:11px}.facts span{display:flex;align-items:center;gap:3px}.route:nth-child(n+4){display:none}
+    .near-card{margin:23px 0 0;border-radius:20px;padding:17px;background:#f1f5ed;border:1px solid #e6ece1}.near-card p{margin:0 0 5px;font-size:13px;font-weight:700}.near-card small{color:var(--muted);font-size:12px}.near-card button{float:right;border:0;background:transparent;color:var(--teal);font-size:12px;font-weight:700;padding:2px 0}
+    .tabbar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(430px,100%);height:76px;padding:9px 19px calc(8px + env(safe-area-inset-bottom));background:rgba(255,253,247,.95);backdrop-filter:blur(14px);border-top:1px solid #ecefe9;display:flex;justify-content:space-between;z-index:10}.tab{border:0;background:none;color:#8a9b97;font-size:10px;display:flex;flex-direction:column;align-items:center;gap:4px;min-width:43px}.tab .ico{font-size:19px;line-height:20px}.tab.active{color:var(--deep);font-weight:700}.tab.publish{transform:translateY(-17px);color:white}.tab.publish .ico{width:43px;height:43px;border-radius:50%;display:grid;place-items:center;background:var(--coral);box-shadow:0 7px 15px rgba(233,124,100,.3);font-size:22px}.tab.publish span:last-child{color:#778a86;margin-top:-2px}
+    .sheet-back{display:none;position:fixed;inset:0;background:rgba(20,48,48,.34);z-index:20}.sheet-back.show{display:block}.sheet{position:fixed;left:50%;bottom:0;transform:translate(-50%,105%);width:min(430px,100%);background:#fffdf8;border-radius:26px 26px 0 0;z-index:21;padding:11px 20px calc(24px + env(safe-area-inset-bottom));transition:.28s ease;box-shadow:0 -12px 45px rgba(25,62,59,.18)}.sheet.show{transform:translate(-50%,0)}.handle{width:34px;height:4px;border-radius:4px;background:#dce4df;margin:0 auto 18px}.sheet h3{margin:0 0 7px;font-size:21px}.sheet p{color:var(--muted);font-size:13px;line-height:1.6;margin:0 0 15px}.sheet-info{padding:13px;background:#f2f6f0;border-radius:14px;font-size:13px;line-height:1.8;margin:12px 0 17px}.primary{border:0;width:100%;background:var(--deep);color:white;border-radius:14px;padding:14px;font-weight:700;font-size:15px}.toast{position:fixed;left:50%;top:20px;transform:translate(-50%,-130px);z-index:30;background:#183e42;color:white;border-radius:999px;padding:10px 15px;font-size:12px;transition:.25s}.toast.show{transform:translate(-50%,0)}
+    @media (min-width:700px){body{padding:18px;background:radial-gradient(circle at 50% 10%,#f8faf2,#dae7e4 70%)}.phone{border-radius:28px;min-height:calc(100dvh - 36px);box-shadow:0 24px 70px rgba(33,75,77,.16)}.tabbar{bottom:18px;border-radius:0 0 28px 28px}}
+  </style>
+</head>
+<body>
+  <div class="phone">
+    <div class="toast" id="toast"></div>
+    <header class="top"><div class="brand"><img src="logo.svg" alt="风里有约"><div><strong>风里有约</strong><small>BEIJING · WEEKEND</small></div></div><button class="avatar" aria-label="我的">予</button></header>
+    <main>
+      <section class="hero"><div class="date">周六 · 08 / 29</div><h1>这个周末，<br>去做点什么？</h1><p>从你附近开始，也可以去北京更远一点的地方。</p></section>
+      <div class="locrow"><div class="loc">⌖ <b>望京</b><span>· 允许定位后更懂你</span></div><div class="switch"><button class="on" data-mode="near">离我最近</button><button data-mode="city">整个北京</button></div></div>
+      <button class="ask" id="ask"><span>还没想好？告诉我一点点</span><strong>我有半天，想出去透透气</strong><i>→</i></button>
+      <section><div class="section-head"><h2>今天想怎么过？</h2><button id="moreWays">更多方式</button></div>
+        <div class="ways" id="ways">
+          <button class="way active" data-filter="all"><span class="emoji">✨</span>随便逛逛</button>
+          <button class="way" data-filter="culture"><span class="emoji">🖼️</span>看点东西</button>
+          <button class="way" data-filter="outdoor"><span class="emoji">🌿</span>出去走走</button>
+          <button class="way" data-filter="food"><span class="emoji">🍜</span>吃点好的</button>
+          <button class="way" data-filter="move"><span class="emoji">🚲</span>动一动</button>
+          <button class="way" data-filter="alone"><span class="emoji">☕</span>一个人待会</button>
+          <button class="way" data-filter="friends"><span class="emoji">👫</span>和朋友见面</button>
+          <button class="way" data-filter="fresh"><span class="emoji">🎪</span>玩点不一样</button>
+          <button class="way" data-filter="night"><span class="emoji">🎵</span>看场演出</button>
+          <button class="way" data-filter="market"><span class="emoji">🧺</span>逛逛市集</button>
+          <button class="way" data-filter="move"><span class="emoji">🏸</span>运动体验</button>
+          <button class="way" data-filter="family"><span class="emoji">🧸</span>带家人出门</button>
+        </div>
+      </section>
+      <section><p class="mini-title" id="listTitle">离你不远，今天就能去</p><div class="filterbar"><button class="filter active" data-filter="all">全部</button><button class="filter" data-filter="2h">2 小时</button><button class="filter" data-filter="half">半天</button><button class="filter" data-filter="solo">适合一个人</button><button class="filter" data-filter="friends">适合约人</button></div>
+        <div class="route-list" id="routeList">
+          <button class="route" data-id="0" data-type="outdoor half solo"><div class="route-visual visual-1"><span class="route-tag">🌿 晒晒太阳</span><span class="shape one"></span><span class="shape two"></span></div><div class="route-body"><h3 class="route-title">沿着亮马河，慢慢走到傍晚</h3><p class="route-desc">不赶路、不设打卡点。找一段水边，把今天交给风和光。</p><div class="facts"><span>⌖ 2.8 km</span><span>◷ 2–3 小时</span><span>¥ 免费</span><span>适合独自去</span></div></div></button>
+          <button class="route" data-id="1" data-type="culture half friends"><div class="route-visual visual-2"><span class="route-tag">🖼️ 看点东西</span><span class="shape one"></span><span class="shape two"></span></div><div class="route-body"><h3 class="route-title">午后看展，再找一家舒服的小店</h3><p class="route-desc">一场展览，一段安静的街区，一杯不着急喝完的咖啡。</p><div class="facts"><span>⌖ 5.2 km</span><span>◷ 3–4 小时</span><span>¥ 80 起</span><span>适合两三人</span></div></div></button>
+          <button class="route" data-id="2" data-type="food 2h friends"><div class="route-visual visual-3"><span class="route-tag">🍜 吃点好的</span><span class="shape one"></span><span class="shape two"></span></div><div class="route-body"><h3 class="route-title">别只吃饭，去逛一段有风的街</h3><p class="route-desc">适合临时约朋友：先吃点喜欢的，再用散步把话聊完。</p><div class="facts"><span>⌖ 3.6 km</span><span>◷ 2 小时</span><span>¥ 100 左右</span><span>适合约人</span></div></div></button>
+          <button class="route" data-id="3" data-type="fresh night market half solo"><div class="route-visual visual-4"><span class="route-tag">🎪 玩点不一样</span><span class="shape one"></span><span class="shape two"></span></div><div class="route-body"><h3 class="route-title">给周末留一次新鲜体验</h3><p class="route-desc">手作、演出或一场特别活动，选一个让今天有一点不同。</p><div class="facts"><span>⌖ 6.0 km</span><span>◷ 半天</span><span>¥ 120 起</span><span>可一个人去</span></div></div></button>
+          <button class="route" data-id="4" data-type="move 2h friends"><div class="route-visual visual-1"><span class="route-tag">🏸 动一动</span><span class="shape one"></span><span class="shape two"></span></div><div class="route-body"><h3 class="route-title">约一场轻运动，把身体叫醒</h3><p class="route-desc">不需要运动计划。选一项你愿意尝试的体验，再一起吃点东西。</p><div class="facts"><span>⌖ 4.1 km</span><span>◷ 2–3 小时</span><span>¥ 80 起</span><span>适合约人</span></div></div></button>
+          <button class="route" data-id="5" data-type="family half outdoor"><div class="route-visual visual-3"><span class="route-tag">🧸 带家人出门</span><span class="shape one"></span><span class="shape two"></span></div><div class="route-body"><h3 class="route-title">慢一点的亲子半日，去公园找找季节</h3><p class="route-desc">留出观察、玩耍和休息的空白，让一家人的周末不必赶行程。</p><div class="facts"><span>⌖ 7.4 km</span><span>◷ 半天</span><span>¥ 免费起</span><span>适合家庭</span></div></div></button>
+        </div>
+      </section>
+      <div class="near-card"><button id="changeLoc">修改位置</button><p>位置只用来帮你找附近的好去处</p><small>不会公开你的精确位置，也不会展示给其他用户。</small></div>
+    </main>
+    <nav class="tabbar"><button class="tab active"><span class="ico">⌂</span><span>首页</span></button><button class="tab"><span class="ico">⌕</span><span>路线</span></button><button class="tab publish"><span class="ico">＋</span><span>发布</span></button><button class="tab"><span class="ico">⌁</span><span>邀约</span></button><button class="tab"><span class="ico">◉</span><span>我的</span></button></nav>
+    <div class="sheet-back" id="backdrop"></div><section class="sheet" id="sheet"><div class="handle"></div><h3 id="sheetTitle">给自己约一次出发</h3><p id="sheetSub">告诉我一点点空闲时间和想要的节奏，我会给你一份适合现在的北京周末计划。</p><div class="sheet-info" id="sheetInfo">周六下午 · 望京附近<br>2–3 小时 · 想透透气 · 一个人也可以</div><button class="primary" id="sheetAction">生成我的周末计划</button></section>
+  </div>
+<script>
+  const routes=[
+    {title:'沿着亮马河，慢慢走到傍晚',sub:'不赶路、不设打卡点。找一段水边，把今天交给风和光。',info:'从亮马桥附近开始，沿水边慢走，选一处停下来坐坐。结束时可自由延伸到附近吃饭或直接回家。'},
+    {title:'午后看展，再找一家舒服的小店',sub:'一场展览，一段安静的街区，一杯不着急喝完的咖啡。',info:'把一个展览作为下午的中心，预留一段不做安排的街区时间。适合想要一点新鲜感，又不想赶行程的周末。'},
+    {title:'别只吃饭，去逛一段有风的街',sub:'适合临时约朋友：先吃点喜欢的，再用散步把话聊完。',info:'不需要提前做很复杂的计划。先约一顿饭，再挑附近一段可以慢走的街，把见面延长一点。'},
+    {title:'给周末留一次新鲜体验',sub:'手作、演出或一场特别活动，选一个让今天有一点不同。',info:'从一件平时不会专门去做的小事开始。可以独自完成，也可以把它分享给正好有空的朋友。'},
+    {title:'约一场轻运动，把身体叫醒',sub:'不需要运动计划。选一项你愿意尝试的体验，再一起吃点东西。',info:'攀岩、羽毛球、骑行或游泳都可以成为周末的起点。选择一个不必有压力的运动体验，让身体先动起来。'},
+    {title:'慢一点的亲子半日，去公园找找季节',sub:'留出观察、玩耍和休息的空白，让一家人的周末不必赶行程。',info:'从一座适合停留的公园开始，留出玩耍、观察和吃点东西的时间。今天不用完成很多事，只需要一起在外面待一会。'}
+  ];
+  const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)]; let selected=null;
+  function toast(text){const t=$('#toast');t.textContent=text;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
+  function openSheet(title,sub,info,action){$('#sheetTitle').textContent=title;$('#sheetSub').textContent=sub;$('#sheetInfo').innerHTML=info;$('#sheetAction').textContent=action;$('#backdrop').classList.add('show');$('#sheet').classList.add('show')}
+  function closeSheet(){$('#backdrop').classList.remove('show');$('#sheet').classList.remove('show')}
+  $('#ask').onclick=()=>openSheet('给自己约一次出发','告诉我一点点空闲时间和想要的节奏，我会给你一份适合现在的北京周末计划。','周六下午 · 望京附近<br>2–3 小时 · 想透透气 · 一个人也可以','生成我的周末计划');
+  $('#backdrop').onclick=closeSheet;
+  $('#sheetAction').onclick=()=>{closeSheet();toast(selected?'已加入我的计划':'已生成一条适合你的周末方案')};
+  $$('.route').forEach(el=>el.onclick=()=>{selected=routes[+el.dataset.id];openSheet(selected.title,selected.sub,selected.info.replaceAll('。','。<br>'),'采用为我的计划')});
+  function filter(key){$$('.route').forEach(r=>r.style.display=(key==='all'||r.dataset.type.includes(key))?'block':'none'); $$('.filter').forEach(b=>b.classList.toggle('active',b.dataset.filter===key));}
+  $$('.filter').forEach(b=>b.onclick=()=>filter(b.dataset.filter));
+  $$('.way').forEach(w=>w.onclick=()=>{const k=w.dataset.filter;$$('.way').forEach(x=>x.classList.toggle('active',x===w));filter(k);$('#listTitle').textContent=k==='all'?'离你不远，今天就能去':'为你挑出的周末方式';});
+  $$('.switch button').forEach(b=>b.onclick=()=>{$$('.switch button').forEach(x=>x.classList.toggle('on',x===b));$('#listTitle').textContent=b.dataset.mode==='near'?'离你不远，今天就能去':'北京这周值得专程去';toast(b.dataset.mode==='near'?'已按望京附近推荐':'已切换为全北京推荐')});
+  $('#moreWays').onclick=()=>{const expanded=$('#ways').classList.toggle('expanded');$('#moreWays').textContent=expanded?'收起方式':'更多方式';};
+  $('#changeLoc').onclick=()=>toast('这里将接入位置授权与常用出发地设置');
+</script>
+</body>
+</html>
